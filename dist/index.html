@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Aakash Vashishtha</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Achievements</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Aakash
+                        <span class="text-primary">Vashishtha</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Bangalore, Karnataka 560068 · 9810257864 ·
+                        <a href="mailto:aakashv1000@gmail.com">aakashv1000@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">I am a highly motivated entry level software engineer looking for a developer role in a fast-paced organization where I can develop and harness my technical skills and be a positive return on investement to the company.
+                     </p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/aakashvash/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/Aakashv1000?tab=repositories"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Platform Engineer</h3>
+                            <div class="subheading mb-3">WABTEC corporation</div>
+                            <p>Stack : Terraform, AWS (EC2, Eventbridge, EMR, Athena, Glue, Lambda), Python (Boto3, Pyspark), HiveQL</p>
+                            <p>
+                                Migrated the current infrastructure to IaC (Infrastructure as Code) using Terraform & Chef.
+                            <ul>
+                                <li>New setup now allows various features such as spinning up Redshift, EMR & Kubernetes clusters.</li>
+                                <li>All applications now run on Chef bootstrapped servers created using terraform with additional support for AWS auto-scaling and AWS load balancing (both ALB & ELB).</li>
+                            </ul>
+                        </p><p>
+                            POC of next gen Data Lake architecture using Terraform. PoC was a success and was adopted for org wide usage.
+
+                            <ul>    
+                                <li>Ran Glue crawler and EMR  jobs (pyspark and hiveql queries in master node) to benchmark efficiency on 125 GB data.</li>
+                                <li>Ran Glue jobs & Athena queries on the schema created by Glue crawler, documented the steps to be used in the new setup. </li>                      <li>Increased the availability of the system by automating fallback to backup clusters when emr-targets are unhealthy (AWS Lambda, network-LB, Boto3). </li>
+                                <li>Created an email based notification service on a serverless architecture (Lambda, EventBridge and SNS) to notify the team when an EMR cluster terminates and a backup cluster gets activated.</li>
+                            </ul>
+</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">JAN 2021 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineering Intern</h3>
+                            <div class="subheading mb-3"><strong>R Systems International, Noida</strong></div>
+                            <p>Stack : Python (Django), MySQL, JS/Bootstrap5</p>
+                            <p>
+                                Report Manager - A web-app to automate the record of ticket-approvals. Team now doesn’t have to store emails in excel sheets manually, excel/pdf/zip files were created on demand. Emails were parsed and stored in mysql tagged with subject for easy querying.
+                                Bitlocker - Inventory management app that keeps track of the company assets given to the employees.
+</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Internship, May ’19 - Jul ’19</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineering Intern</h3>
+                            <div class="subheading mb-3">Riders Easyrath, Gurgaon</div>
+                            <p>Stack :  ElectronJS, Bootstrap5, SQL/Websql</p>
+                            <p>
+                            Created the front end and windows exec (electronJS) of POS (Point Of Sale) website, worked on state management using client side cookies (WebSQL, Js). Used webSql to store the data offline and synced it with the database when the user came online.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Internship, Jun ’20 - Jul ’20</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineering Intern</h3>
+                            <div class="subheading mb-3">Cogmac Industries, Noida</div>
+                            <p>Stack :  Python (BeautifulSoup4), VueJS, HTML/CSS</p>
+                            <p>
+                            Created tools for web scraping, managing java heap, login/signup page & automated file downloads.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Internship, May ’18 - Jul ’18</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Manipal Institute of Technology, Manipal</h3>
+                            <div class="subheading mb-3">Bachelor of Technology</div>
+                            <div>Computer Science and Communication</div>
+                            <p>CGPA: 8.30/10.0</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2017 - August 2021</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Android App: </h3>
+                            <div class="subheading mb-3">VirtualDecor</div>
+                            <p>
+                            A Java app for buying showpieces which uses AR (Google AR-Core) and allows users (user profile: Firestore)  to visualise the item in their homes before actually buying it.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Course project, May ‘20</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Java game:  </h3>
+                            <div class="subheading mb-3">spykey</div>
+                            <p>
+                            An Object finding game that uses template matching (Java OpenCV) where users have to find the given objects in a crowded background photo as fast as possible to beat the leaderboard (MySQL on AWS EC2).</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Course project, Oct ‘19</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">C# App:  </h3>
+                            <div class="subheading mb-3">Manipal Tourism Information System</div>
+                            <p>
+                            A tour management tool where users can see interesting destinations on the maps, users can book hotels, leave reviews for hotels. They can also book tour guides and tour packages, app used Oracle SQL database and C# for front and back end.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Course project, Oct ‘19</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">IOS App:  </h3>
+                            <div class="subheading mb-3">Allergy Card</div>
+                            <p>
+                            App (Swift) allows first responders to get the details of a user's allergies and details (firestore database) in an accident via an id stored on their NFC card (CoreNFC). Android users will be directed to a webpage (AngularJS).</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Course project, Oct ‘19</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">WebApp:  </h3>
+                            <div class="subheading mb-3">KnowDisaster</div>
+                            <p>
+                            Led a team of 3 people to develop a web-app to predict occurrence of floods; notify users & emergency contacts and show nearest relief camp locations. Web-app (VueJS), User profile (MongoDB), geo-location queries (Websql), location heatmaps (HeatmapJS, GoogleMap API), weather data (Accuweather APIs).
+</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Microsoft CodeFunDo Submission, Oct ‘18</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Robotics:  </h3>
+                            <div class="subheading mb-3">R.U.G.V.E.D</div>
+                            <p>
+                            RUGVED Systems is a student based team committed to designing
+                            autonomous robots with cutting edge artificial intelligence.
+                            I Worked on simulations using ROS design engine Gazebo, Rviz and also worked on lane detection using python OpenCV.
+</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">IGVC, Oakland University, Jun ’18</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">CLI App:  </h3>
+                            <div class="subheading mb-3">T-Mail</div>
+                            <p>
+                            CLI app using sockets that sends messages to users authenticated via their Git accounts over terminal.
+</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Feb '18 – March '18</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Apart from being a Software developer, I am a fitness enthusiast and I was active in various college marathons. I enjoy travelling and I play guitar as a creative hobby. I enjoy watching and playing football and was active in college football and basketball league. I was responsible of the event category called Proshow in college fest 2019, which was a sold out show in 2019. I anchored in various events in college fests. I like to read fiction and non-fiction during my free time.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Achievements</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Six Star on Hackerrank
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Convinced Wabtec IT team to switch to terraform for Infra automation.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Bronze medal in college 10k marathon.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Successfully Organised a college fest with sold out ticket sales.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Semi- Finals in college basketball league
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Bronze medal in High School chess tournament
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
