@@ -44,7 +44,7 @@
                         <span class="text-primary">Vashishtha</span>
                     </h1>
                     <div class="subheading mb-5">
-                        Bangalore, Karnataka 560068 · 9810257864 ·
+                        Bangalore, Karnataka 560037 · 9810257864 ·
                         <a href="mailto:aakashv1000@gmail.com">aakashv1000@gmail.com</a>
                     </div>
                     <p class="lead mb-5">I am a highly motivated entry level software engineer looking for a developer role in a fast-paced organization where I can develop and harness my technical skills and be a positive return on investement to the company.
@@ -60,6 +60,31 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
+                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Developer II</h3>
+                            <div class="subheading mb-3">Hashedin By Deloitte (Contractor at Thomson Reuters US office)</div>
+                            <p>  AWS (Step Function, Cloudwatch, Athena, Glue, Lambda), Python (Boto3, Pyspark), Postgres, Jfrog, Java(Spring Boot)</p>
+                            <p>
+                                Worked on the backend of an e-commerce website using Java Spring Boot and Netflix Eureka as a part of training.
+                            <ul>
+                                <li>Implemented using microservice architecture, created the cart and orders microservice.</li>
+                                <li>Deployed the Microservices and the database on GCP.</li>
+                            </ul>
+                        </p><p>
+                           Worked on Ingest and Publishing for organization authority in Thomson Reuters.
+                            <ul>    
+                                <li>Modified Ingest Step Function to increase max concurrency for ingestion glue jobs.</li>
+                                <li>Performed data validation and preprocessing to standardize the data ingested in the tables.</li>                      
+                                <li>Created Glue jobs to generate reports (naics/country/sic/partition) of the organizations and stored it in s3 to feed it to the API facing the customers as well as notifying them when a new report was generated through SNS.</li>
+                                <li>Wrote unit tests for all the glue jobs in publishing repo to increase test coverage.</li>
+                                <li>Enabled spark executor logs for all the glue jobs, which was a persisting issue.</li>
+                                <li>Wrote the code to create organization ID mappings and store it in postgres database for the end usersand migrated to common library implementation.</li>
+                            </ul>
+</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">JAN 2022 - Present</span></div>
+                    </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Platform Engineer</h3>
@@ -81,7 +106,7 @@
                             </ul>
 </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">JAN 2021 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">JAN 2021 - JAN 2022</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -149,6 +174,15 @@
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
+                            <h3 class="mb-0">Data Mining:  </h3>
+                            <div class="subheading mb-3">Machine Learning using Transformers</div>
+                            <p>
+                            Implemented the paper “Attention is all you need” to translate between Hindi and English Sentences. Used IIT Bombay English-Hindi Corpus as a dataset and divided it to obtain training dataset, word embeddings were created using Facebook’s fast-text.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Course project, May ‘20</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
                             <h3 class="mb-0">Java game:  </h3>
                             <div class="subheading mb-3">spykey</div>
                             <p>
@@ -190,9 +224,11 @@
                             <div class="subheading mb-3">R.U.G.V.E.D</div>
                             <p>
                             RUGVED Systems is a student based team committed to designing
-                            autonomous robots with cutting edge artificial intelligence.
-                            I Worked on simulations using ROS design engine Gazebo, Rviz and also worked on lane detection using python OpenCV.
-</p>
+                            autonomous robots with cutting edge artificial intelligence. I was a member of AI subsystem and worked on simulations & lane detection.</p>
+                            <ul>
+                                <li>Simulated the IGVC ground and the RUGVED autonomous vehicle using  ROS design engine, Gazebo, ran simulations using the actual measurements of the vehicle to test the trajectory of the vehicle using a 3D visualization tool Rviz.</li>
+                                <li>Wrote code for Lane Detection by filtering out the camera feed on RUGVED using python OpenCV.</li>
+                            </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">IGVC, Oakland University, Jun ’18</span></div>
                     </div>
@@ -213,7 +249,7 @@
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a Software developer, I am a fitness enthusiast and I was active in various college marathons. I enjoy travelling and I play guitar as a creative hobby. I enjoy watching and playing football and was active in college football and basketball league. I was responsible of the event category called Proshow in college fest 2019, which was a sold out show in 2019. I anchored in various events in college fests. I like to read fiction and non-fiction during my free time.</p>
+                    <p>Apart from being a Software developer, I am a fitness enthusiast and I was active in various college marathons. I enjoy travelling and I play guitar as a creative hobby, I have played guitar multiple times in company's fun and chill meetings for a audience of 100. I enjoy watching and playing football and was active in college football and basketball league. I was responsible of the event category called Proshow in college fest 2019, which was a sold out show in 2019. I anchored in various events in college fests as well as hosted multiple events in my company. I like to read fiction and non-fiction during my free time.</p>
                 </div>
             </section>
             <hr class="m-0" />
@@ -225,6 +261,10 @@
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
                             Six Star on Hackerrank
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Got an Excellence award at Hashedin.
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
@@ -240,7 +280,7 @@
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Semi- Finals in college basketball league
+                            Semi - Finals in college basketball league
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
