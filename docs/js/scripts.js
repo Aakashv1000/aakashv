@@ -1,6 +1,6 @@
 /*!
 * Start Bootstrap - Resume v7.0.4 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2021 Start Bootstrap
+* Copyright 2013-2025 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
 //
@@ -31,4 +31,30 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+});
+
+// Print/PDF functionality
+window.addEventListener('beforeprint', () => {
+    // Hide sidebar when printing
+    const sideNav = document.querySelector('#sideNav');
+    if (sideNav) {
+        sideNav.style.display = 'none';
+    }
+    // Adjust body padding for print
+    document.body.style.paddingLeft = '0';
+});
+
+window.addEventListener('afterprint', () => {
+    // Show sidebar after printing
+    const sideNav = document.querySelector('#sideNav');
+    if (sideNav) {
+        sideNav.style.display = '';
+    }
+    // Restore body padding
+    const isLargeScreen = window.matchMedia('(min-width: 992px)').matches;
+    if (isLargeScreen) {
+        document.body.style.paddingLeft = '17rem';
+    } else {
+        document.body.style.paddingLeft = '0';
+    }
 });
