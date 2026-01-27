@@ -1,6 +1,6 @@
-// 
+//
 // Styles
-// 
+//
 
 // Import variables
 @import "./variables.scss";
@@ -14,6 +14,9 @@
 // Components
 @import "./components/sidenav.scss";
 @import "./components/icons.scss";
+@import "./components/timeline.scss";
+@import "./components/cards.scss";
+@import "./components/animations.scss";
 
 // Sections
 @import "./sections/resume-section.scss";

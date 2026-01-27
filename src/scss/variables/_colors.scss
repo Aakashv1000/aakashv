@@ -13,3 +13,16 @@ $orange: #bd5d38;
 // Override Bootstrap default state colors
 
 $primary: $orange;
+
+// Dark theme palette
+$dark-bg: #0d1117;
+$dark-surface: #161b22;
+$dark-surface-hover: #1c2333;
+$dark-border: #30363d;
+$dark-border-accent: rgba($orange, 0.3);
+$dark-border-glow: rgba($orange, 0.15);
+$text-primary-light: #e6edf3;
+$text-secondary-custom: #8b949e;
+$text-tertiary: #6e7681;
+$orange-bright: #d4724a;
+$orange-glow: rgba($orange, 0.4);

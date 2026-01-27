@@ -1,6 +1,6 @@
-// 
+//
 // Icons
-// 
+//
 
 // Styling for the rounded social media links
 
@@ -11,11 +11,13 @@
         justify-content: center;
         height: 3.5rem;
         width: 3.5rem;
-        background-color: $gray-700;
-        color: $white;
+        background-color: $dark-surface;
+        color: $text-secondary-custom;
+        border: 1px solid $dark-border;
         border-radius: 100%;
         font-size: 1.5rem;
         margin-right: 1.5rem;
+        transition: all 0.3s ease;
 
         &:last-child {
             margin-right: 0;
@@ -23,15 +25,22 @@
 
         &:hover {
             background-color: $primary;
+            color: $white;
+            border-color: $primary;
             transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 20px $orange-glow, 0 4px 12px rgba(0, 0, 0, 0.4);
         }
-        
+
         &.pdf-download {
-            background-color: #dc3545;
-            
+            background-color: rgba(#dc3545, 0.15);
+            border-color: rgba(#dc3545, 0.3);
+            color: #dc3545;
+
             &:hover {
-                background-color: #c82333;
+                background-color: #dc3545;
+                color: $white;
+                border-color: #dc3545;
+                box-shadow: 0 0 20px rgba(#dc3545, 0.4), 0 4px 12px rgba(0, 0, 0, 0.4);
             }
         }
     }
@@ -40,4 +49,14 @@
 // Styling for the development technology icons
 .dev-icons {
     font-size: 3rem;
+    color: $text-secondary-custom;
+
+    .list-inline-item {
+        transition: color 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            color: $orange;
+            transform: scale(1.15);
+        }
+    }
 }
