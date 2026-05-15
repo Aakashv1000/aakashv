@@ -5,8 +5,10 @@
 #sideNav {
     padding-left: 1rem;
     padding-right: 1rem;
-    background: linear-gradient(180deg, #0d1117 0%, #131921 100%) !important;
-    border-right: 1px solid $dark-border;
+    background: linear-gradient(180deg, rgba(8, 11, 15, 0.98) 0%, rgba(15, 20, 28, 0.98) 50%, rgba(10, 13, 18, 0.99) 100%) !important;
+    border-right: 1px solid rgba($dark-border, 0.85);
+    backdrop-filter: blur(16px);
+    box-shadow: 4px 0 40px rgba(0, 0, 0, 0.35);
 
     .navbar-nav .nav-item .nav-link {
         font-weight: 800;

@@ -20,3 +20,6 @@
 
 // Sections
 @import "./sections/resume-section.scss";
+
+// Portfolio polish (after sections so it can extend patterns)
+@import "./portfolio-layout.scss";

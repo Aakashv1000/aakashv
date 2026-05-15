@@ -5,29 +5,32 @@
 section.resume-section {
     display: flex;
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    max-width: 75rem;
-    background-color: $dark-bg;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding-left: clamp(1rem, 3vw, 2.75rem);
+    padding-right: clamp(1rem, 3vw, 2.75rem);
+    padding-top: clamp(3.5rem, 8vh, 5.5rem);
+    padding-bottom: clamp(3.5rem, 8vh, 5.5rem);
+    background-color: transparent;
 
     .resume-section-content {
         width: 100%;
+        max-width: min(96vw, 1520px);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 @include media-breakpoint-up(md) {
     section.resume-section {
-        min-height: 100vh;
+        min-height: auto;
     }
 }
 
 @include media-breakpoint-up(lg) {
     section.resume-section {
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-left: clamp(2rem, 3.5vw, 3.5rem);
+        padding-right: clamp(2rem, 3.5vw, 3.5rem);
     }
 }

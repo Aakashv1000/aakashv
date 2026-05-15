@@ -9,14 +9,8 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const sideNav = document.body.querySelector('#sideNav');
-    if (sideNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            offset: 74,
-        });
-    };
+    // Custom section nav highlight (Bootstrap ScrollSpy breaks on very short tail sections)
+    initSectionNavHighlight();
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -62,6 +56,98 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+/**
+ * Highlight the correct #sideNav link based on which section contains a
+ * reference line in the viewport (works for short Interests / Achievements).
+ */
+function initSectionNavHighlight() {
+    const nav = document.querySelector('#sideNav');
+    if (!nav) return;
+
+    const links = [].slice.call(nav.querySelectorAll('.nav-link.js-scroll-trigger[href^="#"]'));
+    if (!links.length) return;
+
+    const ids = links.map(function (link) {
+        const href = link.getAttribute('href') || '';
+        return href.charAt(0) === '#' ? href.slice(1) : '';
+    }).filter(Boolean);
+
+    function documentTop(el) {
+        return el.getBoundingClientRect().top + window.scrollY;
+    }
+
+    function updateActiveNav() {
+        const scrollY = window.scrollY;
+        const vh = window.innerHeight;
+        const docEl = document.documentElement;
+        const maxScroll = Math.max(0, docEl.scrollHeight - vh);
+
+        // Reference line: mid-viewport (top-only lines stay inside tall Projects too long)
+        const yLine = scrollY + Math.min(Math.max(vh * 0.46, 200), 520);
+
+        let activeId = ids[0];
+
+        // Pinned to bottom: always last section
+        if (scrollY >= maxScroll - 3) {
+            activeId = ids[ids.length - 1];
+        } else {
+            let contained = null;
+            for (let i = 0; i < ids.length; i++) {
+                const el = document.getElementById(ids[i]);
+                if (!el) continue;
+                const top = documentTop(el);
+                const bottom = top + el.offsetHeight;
+                if (yLine >= top && yLine < bottom) {
+                    contained = ids[i];
+                    break;
+                }
+            }
+
+            if (contained) {
+                activeId = contained;
+            } else {
+                // Fallback: last section whose top is above the line
+                for (let j = 0; j < ids.length; j++) {
+                    const el = document.getElementById(ids[j]);
+                    if (!el) continue;
+                    if (documentTop(el) <= yLine) {
+                        activeId = ids[j];
+                    }
+                }
+            }
+        }
+
+        links.forEach(function (link) {
+            const href = link.getAttribute('href') || '';
+            const id = href.charAt(0) === '#' ? href.slice(1) : '';
+            link.classList.toggle('active', id === activeId);
+        });
+    }
+
+    let ticking = false;
+    function onScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                updateActiveNav();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', updateActiveNav);
+    window.addEventListener('load', function () {
+        setTimeout(updateActiveNav, 50);
+        setTimeout(updateActiveNav, 600);
+        setTimeout(updateActiveNav, 1200);
+    });
+
+    window.addEventListener('hashchange', updateActiveNav);
+
+    updateActiveNav();
+}
 
 // Print/PDF functionality
 window.addEventListener('beforeprint', () => {

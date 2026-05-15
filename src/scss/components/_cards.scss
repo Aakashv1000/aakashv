@@ -3,17 +3,19 @@
 //
 
 .dark-card {
-    background-color: $dark-surface;
-    border: 1px solid $dark-border;
-    border-radius: 0.5rem;
+    background: linear-gradient(145deg, rgba($dark-surface, 0.92) 0%, rgba(10, 13, 18, 0.95) 100%);
+    border: 1px solid rgba($dark-border, 0.9);
+    border-radius: 0.75rem;
     padding: 1.5rem;
-    transition: all 0.3s ease;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 
     &:hover {
-        border-color: $dark-border-accent;
-        background-color: $dark-surface-hover;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px $dark-border-glow;
-        transform: translateY(-2px);
+        border-color: rgba($orange, 0.28);
+        background: linear-gradient(145deg, rgba($dark-surface-hover, 0.95) 0%, rgba(12, 16, 24, 0.98) 100%);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba($orange, 0.06), 0 0 32px rgba($orange, 0.08);
+        transform: translateY(-3px);
     }
 }
 
@@ -48,14 +50,18 @@
     }
 }
 
-// Project grid layout
+// Project grid layout — use horizontal space on wide screens
 .project-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: clamp(1rem, 2vw, 1.75rem);
 
     @include media-breakpoint-up(md) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include media-breakpoint-up(xxl) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 

@@ -15,9 +15,8 @@ html(lang='en')
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v5.15.4/js/all.js', crossorigin='anonymous')
 
-        // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
+        // Google fonts — display + UI (portfolio-grade pairing)
+        link(href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap', rel='stylesheet')
 
         // AOS.js CSS
         link(href='https://unpkg.com/aos@2.3.1/dist/aos.css', rel='stylesheet')
@@ -53,28 +52,55 @@ html(lang='en')
                         a.nav-link.js-scroll-trigger(href='#awards') Achievements
 
         // Page Content
-        .container-fluid.p-0
+        .container-fluid.p-0.main-site
 
             // About
             section#about.resume-section
                 .resume-section-content(data-aos='fade-up')
-                    h1.mb-0.gradient-text
-                        | Aakash
-                        span.text-primary  Vashishtha
-                    .subheading.mb-3
-                        | Tempe, Arizona 85288 · (602) 574-5228 ·
-                        a(href='mailto:avashis9@asu.edu') avashis9@asu.edu
-                    #typed-container.mb-4
-                        span#typed-output.subheading
-                    p.lead.mb-5
-                        | Software Development Engineer with 3+ years of experience shipping production systems across the full stack — from cloud infrastructure and data pipelines to backend services and frontend applications. Built microservices at Deloitte for Thomson Reuters, migrated infrastructure to Terraform at WABTEC, and most recently integrated AI capabilities into production applications at AdviNOW Medical. Also contributed to NeurIPS-accepted ML research at ASU's Interactive Robotics Lab. MS in Software Engineering from Arizona State University (3.8 GPA).
-                    .social-icons.mb-4
-                        a.social-icon(href='https://www.linkedin.com/in/aakashvash/', target='_blank', rel='noopener noreferrer')
-                            i.fab.fa-linkedin-in
-                        a.social-icon(href='https://github.com/Aakashv1000?tab=repositories', target='_blank', rel='noopener noreferrer')
-                            i.fab.fa-github
-                        a.social-icon.pdf-download(href='#', onclick='window.print(); return false;', title='Download as PDF')
-                            i.fas.fa-file-pdf
+                    .about-hero-grid
+                        .about-hero-main
+                            p.text-uppercase.small.text-tertiary.mb-2(style='letter-spacing: 0.28em;') Portfolio · Resume
+                            h1.mb-0.gradient-text
+                                | Aakash
+                                span.text-primary  Vashishtha
+                            .subheading.mb-3
+                                | Tempe, Arizona 85288 · (602) 574-5228 ·
+                                a(href='mailto:avashis9@asu.edu') avashis9@asu.edu
+                            #typed-container.mb-4
+                                span#typed-output.subheading
+                            p.lead.mb-4
+                                | Software Development Engineer with 3+ years of experience shipping production systems across the full stack — from cloud infrastructure and data pipelines to backend services and frontend applications. Built microservices at Deloitte for Thomson Reuters, migrated infrastructure to Terraform at WABTEC, and most recently integrated AI capabilities into production applications at AdviNOW Medical. Also contributed to NeurIPS-accepted ML research at ASU's Interactive Robotics Lab. MS in Software Engineering from Arizona State University (3.8 GPA).
+                            .social-icons.mb-0
+                                a.social-icon(href='https://www.linkedin.com/in/aakashvash/', target='_blank', rel='noopener noreferrer')
+                                    i.fab.fa-linkedin-in
+                                a.social-icon(href='https://github.com/Aakashv1000?tab=repositories', target='_blank', rel='noopener noreferrer')
+                                    i.fab.fa-github
+                                a.social-icon.pdf-download(href='#', onclick='window.print(); return false;', title='Download as PDF')
+                                    i.fas.fa-file-pdf
+                        aside.about-hero-aside(aria-label='Quick facts')
+                            .stat-cards
+                                .stat-card
+                                    span.stat-value 3+
+                                    span.stat-label Years shipping production software
+                                .stat-card
+                                    span.stat-value 3.8
+                                    span.stat-label MS Software Engineering GPA · ASU
+                                .stat-card
+                                    span.stat-value Full
+                                    span.stat-label Stack · Cloud · Data · Mobile
+                            .glass-snippet(role='presentation')
+                                span.snippet-comment // focus
+                                span
+                                    span.snippet-k stack
+                                    | : [React, Go, Python, AWS, Flutter]
+                                span
+                                    span.snippet-k currently
+                                    | : 
+                                    span.snippet-s 'building reliable systems'
+                                span
+                                    span.snippet-k openTo
+                                    | : 
+                                    span.snippet-n 'SWE roles'
 
             hr.m-0
 
@@ -390,6 +416,20 @@ html(lang='en')
 
                     .project-grid
                         .project-card(data-aos='fade-up')
+                            h3.mb-0 Inbox-Concierge
+                            .subheading.mb-3 Full-Stack Web Application
+                            p
+                                | Built an AI-powered email triage assistant with Google OAuth and a React frontend plus a FastAPI backend. Fetches the last 200 Gmail threads and classifies them into buckets (Important, Can Wait, Auto-archive, Newsletter) using a batched LLM pipeline, with natural-language inbox summaries, per-email urgency cues, explanations for each decision, and custom buckets that trigger full-thread reclassification. Deployed on Vercel and Render with CI/CD through GitHub.
+                            span.text-primary.d-block.mt-2 Mar 2026 – Mar 2026
+
+                        .project-card(data-aos='fade-up')
+                            h3.mb-0 Octavia-Video-Translator
+                            .subheading.mb-3 AI Video Dubbing System
+                            p
+                                | Built a full-stack AI dubbing pipeline using faster-whisper (int8) for speech-to-text, transformer-based translation with runtime condensation, and Edge-TTS for synthesis, orchestrated with LLaMA.cpp for dynamic chunk sizing. Added multi-threaded parallelism (about 2× real-time), Docker packaging, structured logging, resumable checkpoints, and under 200ms lip-sync drift, with a reactive Flutter client.
+                            span.text-primary.d-block.mt-2 Oct 2025 – Nov 2025
+
+                        .project-card(data-aos='fade-up')
                             h3.mb-0 Data Visualization: Nutritional Impact of Fad Diets
                             .subheading.mb-3 Machine Learning & Data Analysis
                             p
@@ -475,14 +515,36 @@ html(lang='en')
             section#interests.resume-section
                 .resume-section-content
                     h2.mb-5(data-aos='fade-up') Interests
-                    .dark-card(data-aos='fade-up')
-                        p.mb-0
-                            | Apart from being a software developer, I am a fitness enthusiast and was active in various college marathons. I enjoy traveling and play guitar as a creative hobby, having performed multiple times in company fun and chill meetings for audiences of 100+. I enjoy watching and playing football and was active in college football and basketball leagues. I was responsible for the event category called Proshow in college fest 2019, which was a sold-out show. I anchored various events in college fests as well as hosted multiple events in my company. I like to read fiction and non-fiction during my free time.
+                    .interests-grid
+                        .interest-tile.dark-card(data-aos='fade-up')
+                            i.fas.fa-heartbeat.interest-tile-icon(aria-hidden='true')
+                            h3.interest-tile-title
+                                | Fitness & sports
+                            p.interest-tile-text
+                                | Ran college marathons (10K bronze) and stayed active in football and basketball leagues—training and team sports are a steady outlet outside of work.
+                        .interest-tile.dark-card(data-aos='fade-up')
+                            i.fas.fa-guitar.interest-tile-icon(aria-hidden='true')
+                            h3.interest-tile-title
+                                | Music & performance
+                            p.interest-tile-text
+                                | Play guitar for fun and have performed at company events for audiences of 100+; it is a creative break from debugging and design docs.
+                        .interest-tile.dark-card(data-aos='fade-up')
+                            i.fas.fa-microphone.interest-tile-icon(aria-hidden='true')
+                            h3.interest-tile-title
+                                | Events & hosting
+                            p.interest-tile-text
+                                | Led Proshow for a sold-out college fest in 2019 and have anchored or hosted campus and company events—comfortable on stage and with a crowd.
+                        .interest-tile.dark-card(data-aos='fade-up')
+                            i.fas.fa-book-reader.interest-tile-icon(aria-hidden='true')
+                            h3.interest-tile-title
+                                | Travel & reading
+                            p.interest-tile-text
+                                | Enjoy traveling when schedules allow, and reading both fiction and non-fiction to unwind and broaden perspective beyond tech.
 
             hr.m-0
 
             // Awards
-            section#awards.resume-section
+            section#awards.resume-section.resume-section--tail
                 .resume-section-content
                     h2.mb-5(data-aos='fade-up') Achievements
                     .dark-card(data-aos='fade-up')

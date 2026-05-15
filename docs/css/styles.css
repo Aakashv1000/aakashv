@@ -56,7 +56,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: Plus Jakarta Sans, Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -104,7 +104,7 @@ hr:not([size]) {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Syne", "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
   color: #e6edf3;
@@ -5709,7 +5709,7 @@ textarea.form-control-lg {
   z-index: 1080;
   display: block;
   margin: 0;
-  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Plus Jakarta Sans", "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5811,7 +5811,7 @@ textarea.form-control-lg {
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Plus Jakarta Sans", "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -11231,7 +11231,7 @@ p.lead {
 }
 
 .subheading {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Syne", "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
@@ -11358,6 +11358,14 @@ section.resume-section strong {
     display: none !important;
   }
 
+  .about-hero-aside {
+    display: none !important;
+  }
+
+  .about-hero-grid {
+    display: block !important;
+  }
+
   a {
     color: #333 !important;
   }
@@ -11478,8 +11486,10 @@ section.resume-section strong {
 #sideNav {
   padding-left: 1rem;
   padding-right: 1rem;
-  background: linear-gradient(180deg, #0d1117 0%, #131921 100%) !important;
-  border-right: 1px solid #30363d;
+  background: linear-gradient(180deg, rgba(8, 11, 15, 0.98) 0%, rgba(15, 20, 28, 0.98) 50%, rgba(10, 13, 18, 0.99) 100%) !important;
+  border-right: 1px solid rgba(48, 54, 61, 0.85);
+  backdrop-filter: blur(16px);
+  box-shadow: 4px 0 40px rgba(0, 0, 0, 0.35);
 }
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
@@ -11630,17 +11640,19 @@ section.resume-section strong {
   z-index: 1;
 }
 .timeline .timeline-item .timeline-card {
-  background-color: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.95) 0%, rgba(10, 13, 18, 0.98) 100%);
+  border: 1px solid rgba(48, 54, 61, 0.9);
+  border-radius: 0.75rem;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 .timeline .timeline-item .timeline-card:hover {
-  border-color: rgba(189, 93, 56, 0.3);
-  background-color: #1c2333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(189, 93, 56, 0.15);
-  transform: translateY(-2px);
+  border-color: rgba(189, 93, 56, 0.28);
+  background: linear-gradient(145deg, rgba(28, 35, 51, 0.98) 0%, rgba(12, 16, 24, 0.99) 100%);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(189, 93, 56, 0.06), 0 0 28px rgba(189, 93, 56, 0.08);
+  transform: translateY(-3px);
 }
 .timeline .timeline-item .timeline-card h3, .timeline .timeline-item .timeline-card .h3 {
   font-size: 1.5rem;
@@ -11648,7 +11660,7 @@ section.resume-section strong {
 .timeline .timeline-item .timeline-date {
   color: #bd5d38;
   font-weight: 700;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Syne", "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.05rem;
@@ -11673,17 +11685,19 @@ section.resume-section strong {
   }
 }
 .dark-card, .project-card {
-  background-color: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 0.5rem;
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.92) 0%, rgba(10, 13, 18, 0.95) 100%);
+  border: 1px solid rgba(48, 54, 61, 0.9);
+  border-radius: 0.75rem;
   padding: 1.5rem;
-  transition: all 0.3s ease;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 .dark-card:hover, .project-card:hover {
-  border-color: rgba(189, 93, 56, 0.3);
-  background-color: #1c2333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(189, 93, 56, 0.15);
-  transform: translateY(-2px);
+  border-color: rgba(189, 93, 56, 0.28);
+  background: linear-gradient(145deg, rgba(28, 35, 51, 0.95) 0%, rgba(12, 16, 24, 0.98) 100%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(189, 93, 56, 0.06), 0 0 32px rgba(189, 93, 56, 0.08);
+  transform: translateY(-3px);
 }
 
 .project-card {
@@ -11714,11 +11728,16 @@ section.resume-section strong {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: clamp(1rem, 2vw, 1.75rem);
 }
 @media (min-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1400px) {
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -11779,27 +11798,260 @@ html {
 section.resume-section {
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 75rem;
-  background-color: #0d1117;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding-left: clamp(1rem, 3vw, 2.75rem);
+  padding-right: clamp(1rem, 3vw, 2.75rem);
+  padding-top: clamp(3.5rem, 8vh, 5.5rem);
+  padding-bottom: clamp(3.5rem, 8vh, 5.5rem);
+  background-color: transparent;
 }
 section.resume-section .resume-section-content {
   width: 100%;
+  max-width: min(96vw, 1520px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: auto;
   }
 }
 @media (min-width: 992px) {
   section.resume-section {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-left: clamp(2rem, 3.5vw, 3.5rem);
+    padding-right: clamp(2rem, 3.5vw, 3.5rem);
   }
+}
+body {
+  position: relative;
+  background-color: #0d1117;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: radial-gradient(ellipse 120% 80% at 85% -10%, rgba(189, 93, 56, 0.12) 0%, transparent 50%), radial-gradient(ellipse 90% 60% at 10% 40%, rgba(99, 102, 241, 0.06) 0%, transparent 45%), radial-gradient(ellipse 70% 50% at 50% 110%, rgba(56, 189, 248, 0.05) 0%, transparent 40%), linear-gradient(180deg, #080b0f 0%, #0d1117 35%, #0a0e14 100%);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: linear-gradient(rgba(230, 237, 243, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(230, 237, 243, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 88%);
+          mask-image: linear-gradient(180deg, black 0%, transparent 88%);
+}
+
+.main-site {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  section#about.resume-section {
+    min-height: min(92vh, 880px);
+    align-items: center;
+  }
+}
+
+.about-hero-grid {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+@media (min-width: 992px) {
+  .about-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  }
+}
+
+.about-hero-main {
+  min-width: 0;
+}
+
+.about-hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-cards {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(48, 54, 61, 0.85);
+  background: linear-gradient(135deg, rgba(22, 27, 34, 0.95) 0%, rgba(12, 16, 24, 0.98) 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #bd5d38, #d4724a);
+  opacity: 0.85;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(189, 93, 56, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(189, 93, 56, 0.08);
+}
+
+.stat-value {
+  display: block;
+  font-family: "Syne", "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #e6edf3 0%, #bd5d38 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6e7681;
+  line-height: 1.35;
+}
+
+.glass-snippet {
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  padding: 1rem 1.1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(48, 54, 61, 0.9);
+  background: rgba(0, 0, 0, 0.45);
+  color: #8b949e;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+.glass-snippet .snippet-comment {
+  color: #6e7681;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.glass-snippet .snippet-k {
+  color: #7ee787;
+}
+
+.glass-snippet .snippet-s {
+  color: #a5d6ff;
+}
+
+.glass-snippet .snippet-n {
+  color: #ff7b72;
+}
+
+section.resume-section > .resume-section-content > h2.mb-5, section.resume-section > .resume-section-content > .mb-5.h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem 1.5rem;
+  padding-bottom: 0.85rem;
+  margin-bottom: 2rem !important;
+  border-bottom: 1px solid rgba(48, 54, 61, 0.75);
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  letter-spacing: 0.04em;
+  position: relative;
+}
+section.resume-section > .resume-section-content > h2.mb-5::after, section.resume-section > .resume-section-content > .mb-5.h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: min(180px, 40%);
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #bd5d38, #d4724a 45%, transparent);
+}
+
+.text-tertiary {
+  color: #6e7681 !important;
+}
+
+#about h1.gradient-text, #about .gradient-text.h1 {
+  font-size: clamp(3rem, 7vw, 5.25rem);
+  line-height: 1.02;
+}
+
+.glass-snippet > span:not(.snippet-comment) {
+  display: block;
+}
+
+section.resume-section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (min-width: 992px) {
+  section.resume-section[id] {
+    scroll-margin-top: 1rem;
+  }
+}
+.resume-section--tail {
+  padding-bottom: clamp(4rem, 12vh, 8rem) !important;
+}
+
+.interests-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .interests-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.interest-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 0;
+}
+.interest-tile .interest-tile-icon {
+  font-size: 1.35rem;
+  color: #bd5d38;
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+}
+.interest-tile .interest-tile-title {
+  font-family: "Syne", "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #e6edf3;
+  margin-bottom: 0.5rem;
+}
+.interest-tile .interest-tile-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #8b949e;
+  margin-bottom: 0;
 }
